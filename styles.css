@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#flashcard-container {
+    text-align: center;
+}
+
+#flashcard {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    min-width: 200px;
+}
+
+#term {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#verb-forms {
+    margin-top: 10px;
+}
+
+#verb-forms p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#translation {
+    font-size: 20px;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div id="flashcard-container">
+        <div id="flashcard">
+            <div id="term">{{ current_word['term'] }}</div>
+
+            <div id="verb-forms">
+                <p id="infinitive">Infinitive: {{ current_word['infinitive'] }}</p>
+                <p id="past">Past: {{ current_word['past'] }}</p>
+                <p id="participle">Participle: {{ current_word['participle'] }}</p>
+            </div>
+
+            <div id="translation">Translation: {{ current_word['translation'] }}</div>
+        </div>
+
+        <button onclick="showNextCard()">Next</button>
+        <button onclick="toggleTranslation()">Show/Hide Translation</button>
+    </div>
+
+    <script>
+        var currentIndex = 0;
+        var words = {{ words | safe }};
+
+        function showNextCard() {
+            currentIndex = (currentIndex + 1) % words.length;
+            var currentWord = words[currentIndex];
+
+            document.getElementById('term').textContent = currentWord.term;
+            document.getElementById('translation').textContent = "Translation: " + currentWord.translation;
+
+            // Показване на формите на глаголите, ако типът е глагол
+            if (currentWord.type === 'verb') {
+                document.getElementById('verb-forms').style.display = 'block';
+                document.getElementById('infinitive').textContent = "Infinitive: " + currentWord.infinitive;
+                document.getElementById('past').textContent = "Past: " + currentWord.past;
+                document.getElementById('participle').textContent = "Participle: " + currentWord.participle;
+            } else {
+                // Скриване на формите на глаголите, ако текущата дума не е глагол
+                document.getElementById('verb-forms').style.display = 'none';
+                document.getElementById('infinitive').textContent = "Infinitive: NaN";
+                document.getElementById('past').textContent = "Past: NaN";
+                document.getElementById('participle').textContent = "Participle: NaN";
+            }
+        }
+
+        function toggleTranslation() {
+            var translationElement = document.getElementById('translation');
+            translationElement.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

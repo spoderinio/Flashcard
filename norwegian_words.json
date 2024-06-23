@@ -1,0 +1,62 @@
+[
+    {
+        "term": "bok",
+        "translation": "book",
+        "type": "word"
+    },
+    {
+        "term": "hus",
+        "translation": "house",
+        "type": "word"
+    },
+    {
+        "term": "katt",
+        "translation": "cat",
+        "type": "word"
+    },
+    {
+        "term": "hund",
+        "translation": "dog",
+        "type": "word"
+    },
+    {
+        "term": "løpe",
+        "translation": "run",
+        "type": "verb",
+        "infinitive": "løpe",
+        "past": "løp",
+        "participle": "løpt"
+    },
+    {
+        "term": "snakke",
+        "translation": "talk",
+        "type": "verb",
+        "infinitive": "snakke",
+        "past": "snakket",
+        "participle": "snakket"
+    },
+    {
+        "term": "være",
+        "translation": "be",
+        "type": "verb",
+        "infinitive": "være",
+        "past": "var",
+        "participle": "vært"
+    },
+    {
+        "term": "spise",
+        "translation": "eat",
+        "type": "verb",
+        "infinitive": "spise",
+        "past": "spiste",
+        "participle": "spist"
+    },
+    {
+        "term": "drikke",
+        "translation": "drink",
+        "type": "verb",
+        "infinitive": "drikke",
+        "past": "drakk",
+        "participle": "drukket"
+    }
+]
